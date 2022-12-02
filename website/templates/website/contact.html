@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+    <!-- contact section start -->
+    <div class="contact_section layout_padding">
+      <div class="container-fluid">
+        <h1 class="what_taital">Contact us</h1>
+        <p class="amet_text">amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore </p>
+        <div class="contact_section2">
+          <div class="row">
+            <div class="col-md-6 padding_left_0">
+              <div class="mail_section">
+                <form method="post">
+                  {% csrf_token %}
+                  {{ form.as_p }}
+                  <input class="btn btn-primary btn-block" type="submit">
+                </form>
+              </div>
+            </div>
+            <div class="col-md-6 padding_0">
+              <div class="map-responsive">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2241.7042411632383!2d74.61494931381733!3d42.87344589254951!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x389eb7b88079aa6f%3A0x90fb9c93309bbbcc!2zMTAwINGD0LsuINCh0YPQu9GC0LDQvdCwINCY0LHRgNCw0LjQvNC-0LLQsCwg0JHQuNGI0LrQtdC6!5e0!3m2!1sru!2skg!4v1670011922195!5m2!1sru!2skg" width="600" height="400" frameborder="0" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- contact section end -->
+    {% endblock %}
