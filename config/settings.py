@@ -30,6 +30,8 @@ INSTALLED_APPS = [
     "website.apps.WebsiteConfig",
     "crm.apps.CrmConfig",
     "blog.apps.BlogConfig",
+    "erp.apps.ErpConfig",
+    "accounting.apps.AccountingConfig",
 ]
 
 MIDDLEWARE = [
