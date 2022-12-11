@@ -36,32 +36,31 @@
     <div class="header_section">
       <div class="header_left">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-          <div class="logo"><a href="index.html"><img src="{% static 'images/logo.png' %}"></a></div>
+          <div class="logo"><a href="{% url 'home' %}"><img src="">LightCode</a></div>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
               <li class="nav-item">
-                <a class="nav-link" href="{% url 'home' %}">Home</a>
+                <a class="nav-link" href="{% url 'home' %}">Главное</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="{% url 'about' %}">About</a>
+                <a class="nav-link" href="{% url 'contact' %}">Оставить заявку</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="{% url 'services' %}">Services</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="{% url 'team' %}">Team</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="{% url 'contact' %}">Contact Us</a>
+                <a class="nav-link" href="{% url 'blog' %}">Blog</a>
               </li>
             </ul>
           </div>
         </nav>
     </div>
     <!--header section end -->
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
 
   {% block content %}
   CONTENT

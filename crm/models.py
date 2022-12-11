@@ -12,17 +12,18 @@ class Student(models.Model):
         ('SMM', 'SMM'),
         ('Kids', 'Kids'),
     )
-    course = models.CharField('Курс', max_length=225, choices=choice_courses)
+    course = models.CharField('Курс', max_length=225, choices=choice_courses, blank=True)
     choice_tariff = (
         ('Online', 'Online'),
         ('Offline', 'Offline'),
         ('Standart+', 'Standart+'),
     )
-    tariff = models.CharField('Тариф', max_length=255, choices=choice_tariff)
-    payment = models.PositiveIntegerField('Оплата', default=0)
-    data = models.DateTimeField('Дата', auto_now_add=True)
-    finished = models.DateTimeField('Выпуск')
-    certificate = models.FileField('Сертификат', upload_to='certificate/%Y/%m/%d/')
+    tariff = models.CharField('Тариф', max_length=255, choices=choice_tariff, blank=True)
+    payment = models.PositiveIntegerField('Оплата', default=0, blank=True)
+    data = models.DateTimeField('Дата', blank=True)
+    finished = models.DateTimeField('Выпуск', blank=True)
+    certificate = models.FileField('Сертификат', upload_to='certificate/%Y/%m/%d/',
+                                   blank=True)
     accept = models.BooleanField('Принят', default=False)
 
     def __str__(self):
